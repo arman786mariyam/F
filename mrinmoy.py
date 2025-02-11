@@ -8,8 +8,8 @@ from datetime import datetime, timedelta, timezone
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
 # Telegram bot token and channel ID
-TOKEN = '8084650714:AAFzlKB95YpZYqN5MSvDeofZO77L9dhWQl8'  # Replace with your actual bot token
-CHANNEL_ID = '-1002399478136'  # Replace with your specific channel or group ID
+TOKEN = '7888177672:AAGKwC3OfhcvwTdlK6moO6LLxRuqKMeTb1Y'  # Replace with your actual bot token
+CHANNEL_ID = '-1002357119943'  # Replace with your specific channel or group ID
 # Initialize the bot
 bot = telebot.TeleBot(TOKEN)
 
@@ -26,7 +26,7 @@ BAN_DURATION = timedelta(minutes=1)
 DAILY_ATTACK_LIMIT = 5000  # Daily attack limit per user
 
 # List of user IDs exempted from cooldown, limits, and photo requirements
-EXEMPTED_USERS = [8163493962, 7891271253]
+EXEMPTED_USERS = [7992144554, 6377882036]
 
 def reset_daily_counts():
     """Reset the daily attack counts and other data at 12 AM IST."""
@@ -67,7 +67,7 @@ def bgmi_command(message):
 
     # Ensure the bot only works in the specified channel or group
     if str(message.chat.id) != CHANNEL_ID:
-        bot.send_message(message.chat.id, " ⚠️⚠️ 𝗧𝗵𝗶𝘀 𝗯𝗼𝘁 𝗶𝘀 𝗻𝗼𝘁 𝗮𝘂𝘁𝗵𝗼𝗿𝗶𝘇𝗲𝗱 𝘁𝗼 𝗯𝗲 𝘂𝘀𝗲𝗱 𝗵𝗲𝗿𝗲 ⚠️⚠️ \n\n[ 𝗕𝗢𝗧 𝗠𝗔𝗗𝗘 𝗕𝗬 : @Topten_Kari ( TUMHARE_PAPA ) | 𝗗𝗠 𝗙𝗢𝗥 𝗥𝗘𝗕𝗥𝗔𝗡𝗗𝗜𝗡𝗚 ]")
+        bot.send_message(message.chat.id, " ⚠️⚠️ 𝗧𝗵𝗶𝘀 𝗯𝗼𝘁 𝗶𝘀 𝗻𝗼𝘁 𝗮𝘂𝘁𝗵𝗼𝗿𝗶𝘇𝗲𝗱 𝘁𝗼 𝗯𝗲 𝘂𝘀𝗲𝗱 𝗵𝗲𝗿𝗲 ⚠️⚠️ \n\n[ 𝗕𝗢𝗧 𝗠𝗔𝗗𝗘 𝗕𝗬 : @Mr_ArmanXd ( TUMHARE_PAPA ) | 𝗗𝗠 𝗙𝗢𝗥 𝗥𝗘𝗕𝗥𝗔𝗡𝗗𝗜𝗡𝗚 ]")
         return
 
     # Reset counts daily
